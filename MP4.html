@@ -1,0 +1,54 @@
+<HEAD>
+<TITLE>IDSA: MP4</TITLE>
+</HEAD>
+<BODY>
+<PRE>
+CS 4V95.003, CS 5V81.012.  Implementation of data structures and algorithms
+Fall 2016;  Fri, Nov 11
+Mandatory Project 4: Critical paths
+
+Ver 1.0: Initial description (Nov 11, 10:30 AM).
+Ver 1.1: Added sentence about using the last two nodes for s and t (Nov 18).
+
+This is a mandatory project, to be done individually. 
+Max excellence credits (EC): 1.0 
+Only submissions before 1st deadline are eligible for EC.
+
+<B>Due: 11:59 PM, Wed, Dec 7 (1st deadline),  Thu, Dec 15 (2nd deadline).</B>
+
+Code base: Java library, <A HREF="http://www.utdallas.edu/~rbk/teach/2016f/java/mp4.zip">mp4.zip</A>
+Do not use code from outside sources.
+
+<B>Project Description</B>
+Critical paths in PERT charts: Implement the algorithms discussed in
+class for finding critical paths (DAGs representing projects).
+Implement both algorithms for finding topological orders in DAGs that
+were discussed in class.  Use the topological order given by the first
+algorithm for computing EC and the topological order given by the
+second algorithm for computing LC.
+
+Input specification:
+A directed graph suitable for readDirectedGraph() in the Graph class
+is given, followed by the durations of the nodes.  A driver program to
+read the input is provided.  Do not change the way the input is processed.
+If the input graph has N vertices, the last two (N-1 and N) are dummy nodes
+and are not incident to any edges in the input.  These two nodes are to be
+used for s and t.  In your code, add edges incident to these nodes,
+as discussed in class.
+
+Output:
+Line 1: Length of a critical path
+Line 2: A critical path
+Line 3: blank
+Line 4: header of table (Task	EC	LC    Slack)
+Next n lines: Task number, its earliest completion time, lastest
+completion time, and slack.
+
+The following additional output is required for students of 5V81 and
+optional for CS 4V95:
+Line 1: Number of critical nodes
+Line 2: Number of critical paths (k)
+Next k lines: one critical path per line.
+
+The zip file contains a sample input file, and its expected output is
+given at the end of that file.
